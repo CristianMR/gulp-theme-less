@@ -1,0 +1,24 @@
+/* Import variables */
+/* Import header */
+.header {
+  color: #c80009;
+}
+/* Import body */
+/* Import inner a import */
+.world-is-primary-color {
+  border: solid 1px #c80009;
+}
+body {
+  color: #c80009;
+}
+.you .they {
+  color: #c80009;
+}
+/* Import footer */
+.footer {
+  color: #c80009;
+}
+/* Styles in same file */
+.main-style {
+  color: #bb0008;
+}
