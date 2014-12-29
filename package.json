@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "Clean Less files, to make easy themes.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CristianMR/gulp-theme-less.git"
+  },
+  "keywords": [
+    "less",
+    "theme",
+    "gulp",
+    "CristianMR"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
