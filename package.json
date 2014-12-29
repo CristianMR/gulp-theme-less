@@ -1,7 +1,7 @@
 {
   "name": "gulp-theme-less",
-  "version": "0.1.1",
-  "description": "Clean Less files, to make easy themes.",
+  "version": "0.1.2",
+  "description": "A LESS plugin for Gulp. Clean Less files, to make easy themes.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "CristianMR"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha -R spec"
   },
   "author": "Cristian Martín Rios <matrixcmr@gmail.com>",
   "license": "MIT",
@@ -22,5 +22,9 @@
     "gulp-util": "^3.0.1",
     "lodash": "^2.4.1",
     "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "should": "^4.4.2"
   }
 }

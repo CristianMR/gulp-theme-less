@@ -1,0 +1,57 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#survive-first-style {
+  color: @light-blue;
+}
+
+.dont-survive-bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#some-menu a {
+  color: #111;
+  .dont-survive-bordered;
+}
+
+.dont-survive-clearfix {
+  display: block;
+  zoom: 1;
+
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.dont-survive-screencolor {
+  @media screen {
+    color: green;
+    @media (min-width:768px) {
+      color: red;
+    }
+  }
+  @media tv {
+    color: black;
+  }
+}
+
+.dont-survive {
+  color: #333333;
+  .crysis {
+    font-size: 16px;
+  }
+}
+
+.some-survive {
+  color: #203c31;
+  .because-of-me {
+    font-size: 16px;
+    background-color: @nice-blue;
+  }
+}
