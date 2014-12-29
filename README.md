@@ -6,7 +6,7 @@ A LESS plugin for Gulp. Clean LESS files, to make easy themes.
 ## Install
 
 ```
-npm install gulp-less
+npm install gulp-theme-less
 ```
 
 ## Usage
