@@ -1,6 +1,6 @@
 {
   "name": "gulp-theme-less",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A LESS plugin for Gulp. Clean Less files, to make easy themes.",
   "main": "index.js",
   "repository": {

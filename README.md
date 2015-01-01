@@ -3,6 +3,14 @@ gulp-theme-less
 
 A LESS plugin for Gulp. Clean LESS files, to make easy themes.
 
+## What clean?
+
+Cleans properties, selectors, and mixins with static content. So if a variable is present, content will dynamic.
+
+## Make easy themes
+
+Easy and clean. You don't need to worry about all the static content. A theme only needs the properties that need be changed.
+
 ## Install
 
 ```
@@ -21,7 +29,8 @@ var gulpThemeLess = require('gulp-theme-less');
 
 gulp.task('theme-less', function(){
     return gulp.src('./app/styles/main-style.less')
-        .pipe(gulpThemeLess({excludeLessFiles: ['variables.less'], removeExcludeLessFiles: true}))
+        .pipe(gulpThemeLess({excludeLessFiles: ['variables.less'],
+            removeExcludeLessFiles: true}))
         .pipe(gulp.dest('./app/styles/themes/'));
 });
 ```

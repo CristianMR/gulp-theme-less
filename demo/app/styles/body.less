@@ -1,6 +1,14 @@
 /* Import inner a import */
 @import "body-secondary.less";
 
+.static-mixin {
+  overflow-x: hidden;
+}
+
+.dinamic-mixin {
+  border: solid @primaryColor 2px;
+}
+
 body {
   color: @primaryColor;
 }
@@ -8,6 +16,8 @@ body {
 .content {
   width: 100%;
   background-color: #dddddd;
+  .static-mixin;
+  .dinamic-mixin;
 }
 
 .content2 #apple .yeah > .you-got-this,

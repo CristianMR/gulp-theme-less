@@ -33,7 +33,7 @@ function gulpThemeColors(options) {
                 data = importLessFiles(data, options, file);
             }
 
-            data = cleanPropertiesWithoutVariables(data);
+            data = cleanPropertiesWithoutVariables(cleanStaticMixins(data));
 
             file.contents = new Buffer(data);
 
@@ -105,11 +105,34 @@ function searchFilesToImport(data, options, file){
 }
 
 /**
+ * Check if mixin is static, and delete it.
+ */
+function cleanStaticMixins(data){
+
+    var searchMixins = data.match(/^[^:;@]+;/gm);
+
+    //Clean and take unique mixins
+    var mixins = _.uniq(_.map(searchMixins, function(mixin){
+        return mixin.replace(/;/, '').trim();
+    }));
+
+    _.forEach(mixins, function(value){
+        //If the mixin doesn't have a variable, delete it.
+        if(data.match(new RegExp('\\B\\'+value+'[ ]+\\{[^}@]+}', 'gm'))){
+            data = data.replace(new RegExp('\\B\\'+value+'([ ]+|);', 'gm'), '');
+        }
+    });
+
+    return data;
+}
+
+/**
  * If a property doesn't have a '@', then is static and can be deleted.
+ * Only properties, no mixins.
  */
 function cleanPropertiesWithoutVariables(data){
 
-    data = data.replace(/^[^@{}]+;/gm, '');
+    data = data.replace(/^[^@{}]+:[^@{};]+;/gm, '');
 
     return cleanSelectorsWithoutRules(data);
 }

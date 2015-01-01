@@ -8,8 +8,14 @@
 .world-is-primary-color {
   border: solid 1px #0030c8;
 }
+.dinamic-mixin {
+  border: solid #0030c8 2px;
+}
 body {
   color: #0030c8;
+}
+.content {
+  border: solid #0030c8 2px;
 }
 .you .they {
   color: #0030c8;

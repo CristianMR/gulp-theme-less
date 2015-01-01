@@ -13,8 +13,19 @@
   border: solid 1px @primaryColor;
 }
 
+
+.dinamic-mixin {
+  border: solid @primaryColor 2px;
+}
+
 body {
   color: @primaryColor;
+}
+
+.content {
+
+  
+  .dinamic-mixin;
 }
 
 
